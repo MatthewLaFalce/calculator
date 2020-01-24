@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import logo from './logo.svg';
 import ResultComponent from './components/ResultComponent';
 import KeyPadComponent from './components/KeyPadComponent';
 
@@ -52,12 +53,15 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-      <div className="calculator-body">
-      <h1>Simple Calculator</h1>
-      <ResultComponent result={this.state.result}/>
-      <KeyPadComponent onClick={this.onClick}/>
-      </div>
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+        </header>
+        <div className="calculator-body">
+          <h1>Simple Calculator</h1>
+          <ResultComponent result={this.state.result}/>
+          <KeyPadComponent onClick={this.onClick}/>
+        </div>
       </div>
     );
   }
